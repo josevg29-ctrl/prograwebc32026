@@ -1,6 +1,7 @@
 p {
   background-color: blue;
   color: white;
+  text-align: right;
 }
 h1 {
   background-color: darkblue;
@@ -17,4 +18,5 @@ a {
 
 #lista {
   background-color: aqua;
+  font-family: Helvetica;
 }
