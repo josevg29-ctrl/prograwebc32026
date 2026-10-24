@@ -1,18 +1,16 @@
 <!doctype html>
-<html lang="en" data-bs-theme="light">
+<html lang="es" data-bs-theme="light">
   <head>
-    <title>Title</title>
-    <!-- Required meta tags -->
+    <title>Crear Curso</title>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-
-    <!-- Bootstrap CSS v5.3.8 -->
     <link
       href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css"
       rel="stylesheet"
       integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB"
       crossorigin="anonymous"
     />
+    <link rel="stylesheet" href="estilos.css">
   </head>
 
   <body>
@@ -20,12 +18,7 @@
       <header>
         <ul class="nav justify-content-center">
           <li class="nav-item">
-            <a class="nav-link active" href="#" aria-current="page"
-              >Active link</a
-            >
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="#">Link</a>
+            <a class="nav-link active" href="index.html" aria-current="page">Inicio</a>
           </li>
           <li class="nav-item">
             <a
@@ -36,28 +29,13 @@
             >
           </li>
           <li class="nav-item">
-            <a
-              class="nav-link"
-              href="http://127.0.0.1:20021/Semana%206/curso.html"
-              target="_blank"
-              >Crear Cursos</a
-            >
+            <a class="nav-link" href="curso.html">Crear Cursos</a>
           </li>
           <li class="nav-item">
-            <a
-              class="nav-link"
-              href="http://127.0.0.1:20021/Semana%206/editarcurso.html"
-              target="_blank"
-              >Editar Cursos</a
-            >
+            <a class="nav-link" href="editarcurso.html">Editar Cursos</a>
           </li>
           <li class="nav-item">
-            <a
-              class="nav-link"
-              href="http://127.0.0.1:20021/Semana%206/eliminarcurso.html"
-              target="_blank"
-              >Eliminar Cursos</a
-            >
+            <a class="nav-link" href="eliminarcurso.html">Eliminar Cursos</a>
           </li>
         </ul>
       </header>
@@ -72,7 +50,7 @@
             method="post"
           >
             <div class="mb-3">
-              <label for="" class="form-label">Nombre</label>
+              <label for="nombre" class="form-label">Nombre</label>
               <input
                 type="text"
                 class="form-control"
@@ -84,52 +62,48 @@
               />
             </div>
             <div class="mb-3">
-              <label for="" class="form-label">Descripcion</label>
+              <label for="descripcion" class="form-label">Descripción</label>
               <input
                 type="text"
                 class="form-control"
                 name="descripcion"
                 id="descripcion"
                 aria-describedby="helpId"
-                placeholder=""
+                placeholder="Ingrese la descripción del curso"
                 required
               />
             </div>
             <div class="mb-3">
-              <label for="" class="form-label">Tiempo</label>
+              <label for="tiempo" class="form-label">Tiempo</label>
               <input
                 type="text"
                 class="form-control"
                 name="tiempo"
                 id="tiempo"
                 aria-describedby="helpId"
-                placeholder=""
+                placeholder="Ej: 40 horas"
                 required
               />
             </div>
             <div class="mb-3">
-              <label for="" class="form-label">Usuario</label>
+              <label for="usuario" class="form-label">Usuario</label>
               <input
                 type="text"
                 class="form-control"
                 name="usuario"
                 id="usuario"
                 aria-describedby="helpId"
-                placeholder=""
+                placeholder="Ingrese su usuario"
                 required
               />
             </div>
             <div class="mb-3">
-              <label for="" class="form-label">return_url</label>
               <input
-                type="text"
+                type="hidden"
                 class="form-control"
                 name="return_url"
                 id="return_url"
-                aria-describedby="helpId"
-                placeholder=""
-                required
-                value="http://127.0.0.1:20021/Semana%206/curso.html"
+                value="http://127.0.0.1:5500/Semana%206/curso.html"
               />
             </div>
             <div class="mb-3">
@@ -143,12 +117,9 @@
           </form>
         </div>
       </main>
-      <footer>
-        <!-- place footer here -->
-      </footer>
+      <footer>sistema de gestión y venta de cursos · jose viquez</footer>
     </div>
 
-    <!-- Bootstrap JavaScript Bundle (includes Popper) -->
     <script
       src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"
       integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI"

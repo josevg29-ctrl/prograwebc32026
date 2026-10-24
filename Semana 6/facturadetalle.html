@@ -1,0 +1,173 @@
+<!doctype html>
+<html lang="es" data-bs-theme="light">
+  <head>
+    <title>Crear Detalle de Factura</title>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB"
+      crossorigin="anonymous"
+    />
+  <link rel="stylesheet" href="estilos.css">
+</head>
+
+  <body>
+    <div class="container">
+      <header>
+        <ul class="nav justify-content-center">
+          <li class="nav-item">
+            <a class="nav-link active" href="index.html" aria-current="page"
+              >Inicio</a
+            >
+          </li>
+          
+          <li class="nav-item">
+            <a
+              class="nav-link"
+              href="https://paginas-web-cr.com/Api/form/consultarfacturadetalle.php"
+              target="_blank"
+              >Mostrar Detalles</a
+            >
+          </li>
+          <li class="nav-item">
+            <a
+              class="nav-link"
+              href="consultarfacturadetalle.html"
+              target="_blank"
+              >Consultar Detalles</a
+            >
+          </li>
+          <li class="nav-item">
+            <a
+              class="nav-link"
+              href="facturadetalle.html"
+              target="_blank"
+              >Crear Detalles</a
+            >
+          </li>
+          <li class="nav-item">
+            <a
+              class="nav-link"
+              href="editarfacturadetalle.html"
+              target="_blank"
+              >Editar Detalles</a
+            >
+          </li>
+          <li class="nav-item">
+            <a
+              class="nav-link"
+              href="eliminarfacturadetalle.html"
+              target="_blank"
+              >Eliminar Detalles</a
+            >
+          </li>
+        </ul>
+      </header>
+      <main>
+        <div class="container">
+          <h1>Crear Detalle de Factura</h1>
+        </div>
+
+        <div class="container">
+          <form
+            action="https://paginas-web-cr.com/Api/form/crearfacturadetalle.php"
+            method="post"
+          >
+            <div class="mb-3">
+              <label for="id_factura" class="form-label">ID Factura</label>
+              <input
+                type="text"
+                class="form-control"
+                name="id_factura"
+                id="id_factura"
+                aria-describedby="helpId"
+                placeholder="Ingrese el ID de la factura"
+                required
+              />
+            </div>
+            <div class="mb-3">
+              <label for="producto" class="form-label">Producto</label>
+              <input
+                type="text"
+                class="form-control"
+                name="producto"
+                id="producto"
+                aria-describedby="helpId"
+                placeholder="Ingrese el producto"
+                required
+              />
+            </div>
+            <div class="mb-3">
+              <label for="cantidad" class="form-label">Cantidad</label>
+              <input
+                type="number"
+                class="form-control"
+                name="cantidad"
+                id="cantidad"
+                aria-describedby="helpId"
+                placeholder="Ingrese la cantidad"
+                required
+              />
+            </div>
+            <div class="mb-3">
+              <label for="precio" class="form-label">Precio</label>
+              <input
+                type="number"
+                step="any"
+                class="form-control"
+                name="precio"
+                id="precio"
+                aria-describedby="helpId"
+                placeholder="Ingrese el precio"
+                required
+              />
+            </div>
+            <div class="mb-3">
+              <label for="usuario" class="form-label">Usuario</label>
+              <input
+                type="text"
+                class="form-control"
+                name="usuario"
+                id="usuario"
+                aria-describedby="helpId"
+                placeholder="Ingrese el usuario"
+                required
+              />
+            </div>
+            <div class="mb-3">
+              <label for="return_url" class="form-label">return_url</label>
+              <input
+                type="text"
+                class="form-control"
+                name="return_url"
+                id="return_url"
+                aria-describedby="helpId"
+                placeholder=""
+                required
+                value="http://127.0.0.1:5500/Semana%206/facturadetalle.html"
+              />
+            </div>
+            <div class="mb-3">
+              <button type="submit" class="btn btn-primary">Enviar</button>
+              <button type="reset" class="btn btn-danger">Reset</button>
+            </div>
+            <p>
+              Método: POST id_factura producto cantidad precio usuario
+              return_url
+              https://paginas-web-cr.com/Api/form/crearfacturadetalle.php
+            </p>
+          </form>
+        </div>
+      </main>
+      <footer>sistema de gestión y venta de cursos · jose viquez</footer>
+    </div>
+
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI"
+      crossorigin="anonymous"
+    ></script>
+  </body>
+</html>

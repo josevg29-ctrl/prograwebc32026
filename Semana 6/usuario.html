@@ -1,0 +1,139 @@
+<!doctype html>
+<html lang="es" data-bs-theme="light">
+  <head>
+    <title>Crear Usuario</title>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB"
+      crossorigin="anonymous"
+    />
+  <link rel="stylesheet" href="estilos.css">
+</head>
+
+  <body>
+    <div class="container">
+      <header>
+        <ul class="nav justify-content-center">
+          <li class="nav-item">
+            <a class="nav-link active" href="index.html" aria-current="page"
+              >Inicio</a
+            >
+          </li>
+          
+          <li class="nav-item">
+            <a
+              class="nav-link"
+              href="https://paginas-web-cr.com/Api/form/consultarusuario.php"
+              target="_blank"
+              >Mostrar Usuarios</a
+            >
+          </li>
+          <li class="nav-item">
+            <a
+              class="nav-link"
+              href="usuario.html"
+              target="_blank"
+              >Crear Usuarios</a
+            >
+          </li>
+          <li class="nav-item">
+            <a
+              class="nav-link"
+              href="editarusuario.html"
+              target="_blank"
+              >Editar Usuarios</a
+            >
+          </li>
+          <li class="nav-item">
+            <a
+              class="nav-link"
+              href="eliminarusuario.html"
+              target="_blank"
+              >Eliminar Usuarios</a
+            >
+          </li>
+        </ul>
+      </header>
+      <main>
+        <div class="container">
+          <h1>Crear Usuario</h1>
+        </div>
+
+        <div class="container">
+          <form
+            action="https://paginas-web-cr.com/Api/form/crearusuario.php"
+            method="post"
+          >
+            <div class="mb-3">
+              <label for="name" class="form-label">Name</label>
+              <input
+                type="text"
+                class="form-control"
+                name="name"
+                id="name"
+                aria-describedby="helpId"
+                placeholder="Ingrese el nombre del usuario"
+                required
+              />
+            </div>
+            <div class="mb-3">
+              <label for="email" class="form-label">Email</label>
+              <input
+                type="email"
+                class="form-control"
+                name="email"
+                id="email"
+                aria-describedby="helpId"
+                placeholder="Ingrese el correo del usuario"
+                required
+              />
+            </div>
+            <div class="mb-3">
+              <label for="password" class="form-label">Password</label>
+              <input
+                type="password"
+                class="form-control"
+                name="password"
+                id="password"
+                aria-describedby="helpId"
+                placeholder="Ingrese la contraseña"
+                required
+              />
+            </div>
+            <div class="mb-3">
+              <label for="return_url" class="form-label">return_url</label>
+              <input
+                type="text"
+                class="form-control"
+                name="return_url"
+                id="return_url"
+                aria-describedby="helpId"
+                placeholder=""
+                required
+                value="http://127.0.0.1:5500/Semana%206/usuario.html"
+              />
+            </div>
+            <div class="mb-3">
+              <button type="submit" class="btn btn-primary">Enviar</button>
+              <button type="reset" class="btn btn-danger">Reset</button>
+            </div>
+            <p>
+              Método: POST name email password return_url
+              https://paginas-web-cr.com/Api/form/crearusuario.php
+            </p>
+          </form>
+        </div>
+      </main>
+      <footer>sistema de gestión y venta de cursos · jose viquez</footer>
+    </div>
+
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI"
+      crossorigin="anonymous"
+    ></script>
+  </body>
+</html>
