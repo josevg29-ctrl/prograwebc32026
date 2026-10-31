@@ -9,11 +9,16 @@ export async function consultarHoteles() {
     if (!respuesta.ok) {
         throw new Error("Error al consultar el servdidor de hotel.");
     }
-    console.log(respuesta.json());
+
+    const dats = await respuesta.json();
+
+    console.log("Json de la respuesta", dats.data);
 
     return await respuesta.json();
 
 }
+
+
 
 
 consultarHoteles();
