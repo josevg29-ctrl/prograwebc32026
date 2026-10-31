@@ -32,11 +32,14 @@ function pintarTabla(datos) {
                     <td scope="row">${elementIndividuales.id}</td>
                     <td>${elementIndividuales.nombre}</td>
                     <td>${elementIndividuales.descripcion}</td>
+                    <td>${elementIndividuales.estado}</td>
+                    <td>${elementIndividuales.telefono}</td>
+                    <td>${elementIndividuales.sitio_web}</td>
+                    <td>${elementIndividuales.usuario}</td>
+                    <td>${elementIndividuales.fecha_creacion}</td>                    
                 </tr>
         `
     });
-
-
 
 
     //  correo
