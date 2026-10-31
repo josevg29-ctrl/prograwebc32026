@@ -14,10 +14,60 @@ export async function consultarHoteles() {
 
     console.log("Json de la respuesta", dats.data);
 
-    return await respuesta.json();
-
+    pintarTabla(dats.data);
 }
 
+
+function pintarTabla(datos) {
+
+    const tablaHotels = document.getElementById("tablaHotels");
+    tablaHotels.innerHTML = "";
+
+    // <th scope="col">Id</th>
+    // <th scope="col">Nombre</th>
+    // <th scope="col">Descripcion</th>
+    datos.forEach(elementIndividuales => {
+        tablaHotels.innerHTML += `
+                <tr class="">
+                    <td scope="row">${elementIndividuales.id}</td>
+                    <td>${elementIndividuales.nombre}</td>
+                    <td>${elementIndividuales.descripcion}</td>
+                </tr>
+        `
+    });
+
+
+
+
+    //  correo
+    // : 
+    // "villasparaiso@gmail.com"
+    // descripcion
+    // : 
+    // "Hotel 5 Estrellas"
+    // estado
+    // : 
+    // "Activo"
+    // fecha_creacion
+    // : 
+    // "2026-10-25 21:43:15"
+    // id
+    // : 
+    // 368
+    // nombre
+    // : 
+    // "Hotel Villas Paraíso"
+    // sitio_web
+    // : 
+    // "https://hotelvillasparaiso.com"
+    // telefono
+    // : 
+    // "2229-2929"
+    // usuario
+    // : 
+    // "jose" 
+
+}
 
 
 
