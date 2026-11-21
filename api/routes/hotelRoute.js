@@ -25,6 +25,65 @@ router.get('/', async (req, res) => {
 
 
 });
+//Get por id como lo teniamos el hotel api
+router.get('/:id', async (req, res) => {
+    try {
+        const hotel = await Hotel.findById(req.params.id);
+
+        if (!hotel) {
+            res.status(404).json({
+                message: "Usuario no encontrado" + req.params.id
+            })
+        }
+
+        res.json(
+
+            {
+                code: 200,
+                message: "Consulta realizada correctamente",
+                data: hotel
+            });
+
+
+    }
+    catch (error) {
+        res.status(500).json({
+            message: error.message
+        })
+    }
+
+
+});
+
+
+
+
+//Post como lo teniamos el hotel api
+router.post('/', async (req, res) => {
+    try {
+        const hotel = new Hotel(req.body);
+
+        const guardarHotel = await hotel.save();
+
+        res.status(201).json(
+            {
+
+                message: "Usuario creado",
+                data: guardarHotel
+            });
+
+
+    }
+    catch (error) {
+        res.status(500).json({
+            message: error.message
+        })
+    }
+
+
+});
+
+
 
 
 module.exports = router;
