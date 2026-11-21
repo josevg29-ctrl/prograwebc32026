@@ -26,7 +26,23 @@ const hotelSchema = new mongoose.Schema(
         usuario: {
             type: String,
             required: true
+        },
+        fecha_creacion: {
+            type: Date,
+            default: Date.now
+        },
+        estado: {
+            type: String,
+            required: true,
+            default: 'Activo'
         }
+
+
+
+
+
+        //       "fecha_creacion": "2026-11-20 21:31:01",
+        //       "estado": "Activo"
     }
 );
 
